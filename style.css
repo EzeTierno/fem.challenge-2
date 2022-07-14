@@ -1,0 +1,313 @@
+:root {
+  --clr-accent-400: hsl(245, 75%, 52%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(225, 100%, 98%);
+  --clr-neutral-300: hsl(225, 100%, 94%);
+  --clr-neutral-400: hsl(224, 23%, 55%);
+
+  --clr-primary-400: hsl(223, 47%, 23%);
+
+  --ff-primary: 'Red Hat Display', sans-serif;
+
+  --ff-body: var(--ff-primary);
+
+  --fw-regular:500;
+  --fw-bold:700;
+  --fw-extra:900;
+  
+  --fs-250: .825em;
+  --fs-300: .875em;
+  --fs-400: .95em;
+  --fs-450: .8em;
+  --fs-600: 1.01em;
+  --fs-650: 1.4em;
+  --fs-800: 1.75em;
+ 
+  --fs-body: var(--fs-600);
+  --fs-heading:var(--fs-800);
+  --fs-small:var(--fs-300);
+  --fs-button:var(--fs-400);
+  --fs-mid:var(--fs-600);
+
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* Utility classes */
+
+.text-primary-400 {
+  color:var(--clr-primary-400);
+}
+
+.text-neutral-100 {
+  color:var(--clr-neutral-100);
+}
+
+.text-neutral-400 {
+  color:var(--clr-neutral-400);
+}
+
+.text-accent-400 {
+  color:var(--clr-accent-400);
+}
+
+.bg-neutral-100 {
+  background-color:var(--clr-neutral-100);
+}
+
+.bg-neutral-200 {
+  background-color:var(--clr-neutral-200);
+}
+
+.bg-accent-400 {
+  background-color:var(--clr-accent-400);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-extra {
+  font-weight: var(--fw-extra);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+}
+
+.fs-body {
+  font-size: var(--fs-body);
+}
+.fs-heading {
+  font-size: var(--fs-heading);
+}
+.fs-button{
+  font-size: var(--fs-button);
+}
+.fs-small {
+  font-size: var(--fs-small);
+}
+.fs-mid {
+  font-size: var(--fs-mid);
+}
+
+/* Here comes the sun */
+
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--clr-neutral-300);
+  background-image: url('../order-summary-compontent-main/images/pattern-background-desktop.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container {
+  width: 450px;
+  height: 697px;
+  border-radius: 20px;
+  background-image: url('../order-summary-compontent-main/images/illustration-hero.svg');
+  background-repeat: no-repeat;
+  padding: 220px 0 0 0;
+  box-shadow: 0 15px 30px hsla(223, 47%, 23%, 0.05);
+}
+
+.card {
+  width: 100%;
+  text-align: center;
+  padding: 3em;
+}
+
+
+.attribution {
+position:absolute;
+bottom:5px;
+}
+
+.card__title {
+  margin-bottom:16px;
+  margin-top:-5px;
+}
+
+.card__text {
+  margin-bottom:20px;
+  line-height: 25px;
+}
+
+.card__plan {
+  width: 100%;
+  height: 98px;
+  border-radius: 10px;
+  padding: 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.plan__icon {
+  width: 50px;
+  height: 50px;
+  background-image: url('../order-summary-compontent-main/images/icon-music.svg');
+  background-position: center;
+}
+
+.plan__info {
+  width: 165px;
+  text-align: left;
+}
+
+.card__btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  box-shadow: 0 15px 30px hsla(245, 75%, 52%, 0.31);
+}
+
+.btn {
+  text-decoration: none;
+}
+
+@media (max-width:520px) {
+
+  :root {
+    --fs-heading:var(--fs-650);
+    --fs-body:var(--fs-400);
+    --fs-small:var(--fs-250);
+    --fs-mid:var(--fs-300);
+  }
+
+  body {
+    background-image: url('../order-summary-compontent-main/images/pattern-background-mobile.svg');
+  }
+  
+  .container {
+    width: 327px;
+    height: 567px;
+    border-radius: 20px;
+    background-image: url('../order-summary-compontent-main/images/illustration-hero.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 160px 0 0 0;
+    box-shadow: 0 15px 30px hsla(223, 47%, 23%, 0.05);
+    
+  }
+
+  .card {
+    width: 100%;
+    text-align: center;
+    padding: 30px 25px;
+  }
+
+  .card__title {
+    margin-bottom:15px;
+    margin-top:0px;
+  }
+
+  .card__text {
+    padding: 0 10px;
+  }
+
+  .card__plan {
+    height: 80px;
+    padding: 15px;
+    margin-bottom: 25px;
+  }
+
+  .card__btn {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    
+  }
+
+  .plan__info {
+    width: 110px;
+  }
+  
+}
